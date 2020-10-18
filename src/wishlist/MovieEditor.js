@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 
+import FormTextArea from '../primitives/FormTextArea';
 import CloseButton from '../primitives/CloseButton';
 import PrimaryButton from '../primitives/PrimaryButton';
 
@@ -68,10 +69,12 @@ class MovieEditor extends Component {
                             <CloseButton onClick={this.handleClose} />
                         </div>
                         <div className="modal-body">
-                            <div className="form-group">
-                                <label>Notes:</label>
-                                <textarea className="form-control" value={notes} onChange={this.handleChangeNotes} />
-                            </div>
+                            <FormTextArea
+                                name="notes"
+                                label="Notes:"
+                                value={notes}
+                                onChange={this.handleChangeNotes}
+                            />
                         </div>
                         <div className="modal-footer">
                             <PrimaryButton onClick={this.handleSave}>Save</PrimaryButton>
