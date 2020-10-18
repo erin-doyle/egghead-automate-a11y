@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import FormInput from '../primitives/FormInput';
+import PrimaryButton from '../primitives/PrimaryButton';
 
 
 class Login extends Component {
@@ -91,7 +92,7 @@ class Login extends Component {
                                     helperText="Passwords are case sensitive"
                                 />
 
-                                <button type="button" className="btn btn-primary" onClick={this.onSubmit}>Login</button>
+                                <PrimaryButton onClick={this.onSubmit}>Login</PrimaryButton>
                             </div>
                         </form>
                     </div>

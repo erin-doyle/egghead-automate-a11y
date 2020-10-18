@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import SecondaryButton from '../primitives/SecondaryButton';
+
 
 const Header = ({ title, buttonText, handleButtonClick }) => (
     <>
@@ -8,7 +10,7 @@ const Header = ({ title, buttonText, handleButtonClick }) => (
             <span className="navbar-text">
                 {title}
             </span>
-            <button className="btn btn-outline-secondary" onClick={handleButtonClick}>{buttonText}</button>
+            <SecondaryButton variant="outline" onClick={handleButtonClick}>{buttonText}</SecondaryButton>
         </div>
     </>
 );

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 
+import CloseButton from '../primitives/CloseButton';
+import PrimaryButton from '../primitives/PrimaryButton';
+
 
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#app-root');
@@ -62,9 +65,7 @@ class MovieEditor extends Component {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 id="modal-title" className="modal-title">Edit Movie</h5>
-                            <button type="button" className="close" onClick={this.handleClose}>
-                                <span>&times;</span>
-                            </button>
+                            <CloseButton onClick={this.handleClose} />
                         </div>
                         <div className="modal-body">
                             <div className="form-group">
@@ -73,7 +74,7 @@ class MovieEditor extends Component {
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-primary" onClick={this.handleSave}>Save</button>
+                            <PrimaryButton onClick={this.handleSave}>Save</PrimaryButton>
                         </div>
                     </div>
                 </div>

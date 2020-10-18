@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import SecondaryButton from '../primitives/SecondaryButton';
+
 
 const MovieToolbarButton = ({ movieTitle, buttonText, buttonLabel, clickHandler }) => {
     return (
-        <button className="btn btn-secondary" onClick={clickHandler}>{buttonText}</button>
+        <SecondaryButton onClick={clickHandler}>{buttonText}</SecondaryButton>
     );
 };
 
