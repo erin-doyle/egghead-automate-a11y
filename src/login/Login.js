@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import FormInput from '../primitives/FormInput';
+
 
 class Login extends Component {
     constructor(props) {
@@ -57,8 +59,6 @@ class Login extends Component {
 
     render() {
         const { isUsernameValid, isPasswordValid } = this.state;
-        const usernameClasses = `form-control ${!isUsernameValid ? 'is-invalid' : ''}`;
-        const passwordClasses = `form-control ${!isPasswordValid ? 'is-invalid' : ''}`;
 
         return (
             <div className="login row align-items-center">
@@ -70,36 +70,26 @@ class Login extends Component {
                         <form>
                             <div className="card-body">
 
-                                <div className="form-group">
-                                    <label>Username</label>
-                                    <input
-                                        type="text"
-                                        name="username"
-                                        className={usernameClasses}
-                                        placeholder="Enter username"
-                                        onChange={this.handleUsernameChange}
-                                    />
-                                    <div className="invalid-feedback">
-                                        Please provide a Username.
-                                    </div>
-                                </div>
+                                <FormInput
+                                    id="field-username"
+                                    type="text"
+                                    name="username"
+                                    label="Username"
+                                    isValid={isUsernameValid}
+                                    onChange={this.handleUsernameChange}
+                                    errorText="Please provide a Username."
+                                />
 
-                                <div className="form-group">
-                                    <label>Password</label>
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        className={passwordClasses}
-                                        placeholder="Password"
-                                        onChange={this.handlePasswordChange}
-                                    />
-                                    <small className="form-text text-muted">
-                                        Passwords are case sensitive
-                                    </small>
-                                    <div className="invalid-feedback">
-                                        Please provide a Password.
-                                    </div>
-                                </div>
+                                <FormInput
+                                    id="field-password"
+                                    type="password"
+                                    name="password"
+                                    label="Password"
+                                    isValid={isPasswordValid}
+                                    onChange={this.handlePasswordChange}
+                                    errorText="Please provide a Password."
+                                    helperText="Passwords are case sensitive"
+                                />
 
                                 <button type="button" className="btn btn-primary" onClick={this.onSubmit}>Login</button>
                             </div>
