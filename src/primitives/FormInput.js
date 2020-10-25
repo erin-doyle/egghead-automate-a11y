@@ -45,7 +45,6 @@ FormInput.defaultProps = {
 };
 
 FormInput.propTypes = {
-    id: PropTypes.string.isRequired,
     type: PropTypes.string,
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,

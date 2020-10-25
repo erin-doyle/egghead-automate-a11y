@@ -14,7 +14,16 @@
     "react-scripts": "3.4.3"
   },
   "devDependencies": {
-    "react-axe": "^3.5.4"
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/node-logger": "^6.0.26",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.26",
+    "babel-loader": "^8.1.0",
+    "react-axe": "^3.5.4",
+    "react-is": "^16.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,10 +31,15 @@
     "lint": "eslint src",
     "pretest": "npm run lint",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
-    "extends": ["react-app", "plugin:jsx-a11y/recommended"]
+    "extends": [
+      "react-app",
+      "plugin:jsx-a11y/recommended"
+    ]
   },
   "browserslist": {
     "production": [
