@@ -5,9 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV !== 'production') {
     // Set up react-axe to catch accessibility issues during development
-    const axe = require('react-axe');
+    const axe = require('@axe-core/react');
     axe(React, ReactDOM, 1000);
 }
 
