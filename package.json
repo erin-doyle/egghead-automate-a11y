@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/user-event": "^7.2.1",
+    "eslint-plugin-cypress": "^2.12.1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -24,6 +25,8 @@
     "@storybook/react": "^6.1.11",
     "@testing-library/react": "^9.5.0",
     "babel-loader": "^8.1.0",
+    "cypress": "^8.4.1",
+    "cypress-axe": "^0.13.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "jest-axe": "^4.1.0",
@@ -35,6 +38,7 @@
     "lint": "eslint src",
     "pretest": "npm run lint",
     "test": "react-scripts test",
+    "cypress:open": "cypress open",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
@@ -42,7 +46,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "plugin:jsx-a11y/recommended"
+      "plugin:jsx-a11y/recommended",
+      "plugin:cypress/recommended"
     ],
     "rules": {
       "import/no-anonymous-default-export": "off"
