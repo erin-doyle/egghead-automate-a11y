@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PrimaryButton = ({ type, onClick, children }) => (
+const PrimaryButton = ({ id, type, onClick, children }) => (
     <button
+        id={id}
         type={type}
         className="btn btn-primary"
         onClick={onClick}
@@ -12,11 +13,13 @@ const PrimaryButton = ({ type, onClick, children }) => (
 );
 
 PrimaryButton.defaultProps = {
+    id: null,
     type: 'button',
     onClick: null
 };
 
 PrimaryButton.propTypes = {
+    id: PropTypes.string,
     type: PropTypes.string,
     onClick: PropTypes.func,
     children: PropTypes.node.isRequired

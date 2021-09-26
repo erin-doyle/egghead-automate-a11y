@@ -92,7 +92,7 @@ class Login extends Component {
                                     helperText="Passwords are case sensitive"
                                 />
 
-                                <PrimaryButton onClick={this.onSubmit}>Login</PrimaryButton>
+                                <PrimaryButton id="login-button" onClick={this.onSubmit}>Login</PrimaryButton>
                             </div>
                         </form>
                     </div>
