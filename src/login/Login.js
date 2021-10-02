@@ -66,7 +66,7 @@ class Login extends Component {
                 <div className="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
                     <div className="card bg-primary">
                         <h5 className="card-header">
-                            Movie Wishlist Login
+                            Movie Wishlist Login!
                         </h5>
                         <form>
                             <div className="card-body">
