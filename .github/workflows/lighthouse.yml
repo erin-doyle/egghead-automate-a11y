@@ -1,0 +1,23 @@
+name: Lighthouse
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lighthouse:
+    name: Audit accessibility with Lighthouse
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - name: prepare application
+        run: npm install
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.8.x
+          lhci autorun
