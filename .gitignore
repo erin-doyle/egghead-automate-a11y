@@ -111,6 +111,7 @@ dist
 
 # testing
 /coverage
+.lighthouseci
 
 # production
 /build

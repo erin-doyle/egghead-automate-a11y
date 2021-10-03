@@ -1,0 +1,16 @@
+{
+    "ci": {
+        "collect": {
+            "url": [
+                "http://localhost:5000/login"
+            ],
+            "startServerCommand": "serve:lhci",
+            "startServerReadyPattern": "Accepting connections at http://localhost:5000",
+            "settings": {
+                "onlyCategories": [
+                    "accessibility"
+                ]
+            }
+        }
+    }
+}
