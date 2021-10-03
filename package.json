@@ -40,7 +40,7 @@
     "build": "react-scripts build",
     "serve": "serve -s build",
     "serve:prod": "NODE_ENV=production npm run serve",
-    "serve:lhci": "npm run build && npm run serve:prod",
+    "serve:lhci": "npm run serve:prod",
     "lint": "eslint src",
     "pretest": "npm run lint",
     "test-only": "react-scripts test",
